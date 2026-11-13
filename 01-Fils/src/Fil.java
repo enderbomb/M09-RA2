@@ -27,6 +27,14 @@ public class Fil extends Thread {
     }
 
     private void runEstricte() {
-
+        int num = 0;
+        while (num < 9) {
+            num++;
+            System.out.println(nom + " " + num);
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) { }
+        }
+        System.out.println("Termina el fil " + nom);
     }
 }
